@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT fnac (telephone+)>
+<!ELEMENT telephone (model,stockage, taille-ecran)>
+<!ELEMENT model (#PCDATA)>
+<!ELEMENT stockage (#PCDATA)>
+<!ELEMENT taille-ecran (#PCDATA)>
+<!ENTITY stockage "<stockage> 32G </stockage>">
+<!ENTITY stockage "<stockage> 64G </stockage>">
+

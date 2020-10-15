@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE fnac SYSTEM "fnac.dtd">
+<fnac>
+	<telephone>
+		<model>Apple iPod Touch 32 Go Bleu</model>
+		&stockage;
+		<taille-ecran>4"</taille-ecran>
+	</telephone>
+	<telephone>
+		<model>Apple iPod Touch V 64 Go Silver - Argent</model>
+		&stockage;
+		<taille-ecran>4"</taille-ecran>
+	</telephone>
+</fnac>
+	

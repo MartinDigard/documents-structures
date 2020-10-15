@@ -1,0 +1,5 @@
+<element name="livres" xmlns="http://relaxng.org/ns/structure/1.0">
+<element name="bibliotheque">
+<oneOrMore>
+<element name="etagere">
+<attribute name="type">
