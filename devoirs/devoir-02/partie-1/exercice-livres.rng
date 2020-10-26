@@ -1,4 +1,4 @@
-<element name="bibliotheque" xmlns="http://relaxng.org/ns/structure/1.0">
+<element name="bibliotheque" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
     <oneOrMore>
         <element  name="etagere">
             <attribute name="type">
@@ -6,13 +6,21 @@
             </attribute>
             <optional>
                 <attribute name="poussiere">
-                    <text/>
+                    <data type="boolean"/>
                 </attribute>
             </optional>
             <zeroOrMore>
             <element name="livre">
-                <attribute name="isbn"/>
-                <attribute name="prix"/>
+                <attribute name="isbn">
+                    <data type="token">
+                        <param name="pattern">
+                        [0-9]{3}
+                        </param>
+                    </data>
+                </attribute>
+                <attribute name="prix">
+                    <data type="float"/>
+                </attribute>
                 <element name="titre"> <text/></element>
                 <element name="auteur">
                             <optional>

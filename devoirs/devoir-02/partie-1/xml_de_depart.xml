@@ -1,4 +1,4 @@
-<?xml-model href="livres.rng" type="application/xml" 
+<?xml-model href="exercice-livres.rng" type="application/xml" 
             schematypens="http://relaxng.org/ns/structure/1.0"?>
 <bibliotheque>
     <etagere type="sf">
