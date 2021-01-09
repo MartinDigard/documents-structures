@@ -1,8 +1,0 @@
-1. /pdv_liste
-2. /pdv_liste//*
-3. /pdv_liste//ville
-4. /pdv_liste/pdv[46]
-5. /pdv_liste/pdv/prix[last()]
-6. /pdv_liste/pdv[@id ="3150005"]
-7. /pdv_liste/pdv[not(prix[@nom = 'GPLc'])]
-8. 
