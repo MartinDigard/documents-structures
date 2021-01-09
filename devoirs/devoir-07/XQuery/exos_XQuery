@@ -1,0 +1,62 @@
+exo1
+
+declare namespace local = docs-structs;
+
+declare function local:mot-to-loucherbem( as xs:string) as xs:string {
+let  := ('a', 'e', 'i', 'o', 'u', 'y')
+let -lettre := substring(, 1, 1)
+
+return 
+if (-lettre = )
+then 'l' ||  ||'bem'
+else 'l' || substring(, 2) || -lettre || 'em'
+};
+
+exo2
+
+declare namespace local = "docs-structs";
+
+declare function local:mot-to-loucherbem($mot as xs:string) as xs:string {
+let $voyelles := ('a', 'e', 'i', 'o', 'u', 'y')
+let $premiere-lettre := substring($mot, 1, 1)
+
+return 
+if ($premiere-lettre = $voyelles)
+then 'l' || $mot ||'bem'
+else 'l' || substring($mot, 2) || $premiere-lettre || 'em'
+};
+
+declare function local:phrase-to-loucherbem($phrase as xs:string*) as xs:string* {
+for $mot in tokenize($phrase, ' ')
+return local:mot-to-loucherbem($mot)
+};
+
+(:let $mots := doc("file:///path")vocabulaire/mot1/text()
+for $mot in $mots
+return local:mot-to-loucherbem($mot):)
+
+let $phrase := "Une phrase pour tester la fonction"
+return local:phrase-to-loucherbem($phrase)
+
+let $document := doc("file:////Users/ap/Desktop/documents-structures/07-XQuery/juicers.xml")
+
+partie 2
+for $juicer in $document/juicers/juicer
+    order by xs:float($juicer/cost)
+    where contains($juicer/name, "Juicer")
+return string($juicer/@id)
+
+
+partie 3
+declare function local:normalise-texte($texte as xs:string) as xs:string* {
+
+    let $ponctuations := "?!;.,'"
+    return translate($texte, $ponctuations, "") => lower-case() => tokenize(' ')
+};
+
+declare function local:normalise-texte($texte as xs:string) as xs:string* {
+
+    let $ponctuations := "?!;.,'"""
+    return translate($texte, $ponctuations, "") => lower-case() => tokenize(' ')
+};
+
