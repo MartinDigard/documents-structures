@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<meta xmlns="http://exist-db.org/xquery/repo">
+    <description>Application hello world</description>
+    <author/>
+    <website/>
+    <status>alpha</status>
+    <license>GNU-LGPL</license>
+    <copyright>true</copyright>
+    <type>application</type>
+    <target>hello</target>
+    <prepare>pre-install.xql</prepare>
+    <finish/>
+<deployed>2021-01-16T01:32:29.123+01:00</deployed>
+</meta>
